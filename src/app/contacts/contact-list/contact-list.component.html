@@ -1,0 +1,18 @@
+<table class="table table-hover">
+    <thead>
+        <th>Name</th>
+        <th>Group</th>
+        <th>Mobile</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of list">
+            <td (click)="showDetails(contact)">{{contact.fullName}}</td>
+            <td (click)="showDetails(contact)">{{contact.group}}</td>
+            <td (click)="showDetails(contact)">{{contact.mobile}}</td>
+            <td><a class="btn text-info" (click)="onEdit(contact)"><i class="fa fa-edit"></i></a></td>
+            <td><a class="btn text-danger" (click)="onDelete(contact.id)"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    </tbody>
+</table>
